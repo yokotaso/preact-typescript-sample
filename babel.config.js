@@ -4,7 +4,7 @@ module.exports = function (api) {
   const presets = [
     "@babel/env",
     "@babel/typescript",
-    ["@babel/preset-react", { "pragma":"require('preact').h" }]
+    ["@babel/preset-react", { "pragma":"h" }]
   ];
   const plugins = [
     "@babel/proposal-class-properties",
