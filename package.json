@@ -4,7 +4,10 @@
   "description": "Sample code for preact/typescript/storybook",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --parser typescript  --check \"src/**/*.{ts,tsx}\"",
+    "format": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\""
   },
   "repository": {
     "type": "git",
@@ -22,9 +25,11 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@cybozu/eslint-config": "^4.0.0",
     "@kintone/dts-gen": "^1.0.1",
+    "@types/node": "^11.13.4",
     "babel-loader": "^8.0.5",
     "eslint": "^5.16.0",
     "fork-ts-checker-webpack-plugin": "^1.0.2",
