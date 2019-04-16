@@ -1,3 +1,5 @@
+# artifact
+build/
 # Logs
 logs
 *.log
