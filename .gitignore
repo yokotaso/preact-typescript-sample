@@ -1,4 +1,5 @@
 # artifact
+dist/
 build/
 # Logs
 logs
