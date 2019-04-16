@@ -1,0 +1,39 @@
+{
+  "name": "preact-typescript-sample",
+  "version": "1.0.0",
+  "description": "Sample code for preact/typescript/storybook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yokotaso/preact-typescript-sample.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yokotaso/preact-typescript-sample/issues"
+  },
+  "homepage": "https://github.com/yokotaso/preact-typescript-sample#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@cybozu/eslint-config": "^4.0.0",
+    "@kintone/dts-gen": "^1.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "fork-ts-checker-webpack-plugin": "^1.0.2",
+    "prettier": "^1.17.0",
+    "typescript": "^3.4.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "preact": "^10.0.0-alpha.4"
+  }
+}
