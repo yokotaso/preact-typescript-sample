@@ -2,9 +2,18 @@ module.exports = function (api) {
   api.cache(true);
 
   const presets = [
-    "@babel/env",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": "2",
+      }
+    ],
     "@babel/typescript",
-    ["@babel/preset-react", { "pragma":"h" }]
+    [
+      "@babel/preset-react", 
+      { "pragma":"h" }
+    ]
   ];
   const plugins = [
     "@babel/proposal-class-properties",
