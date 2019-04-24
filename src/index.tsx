@@ -1,7 +1,6 @@
 /** @jsx h */
 import {render, h, JSX} from 'preact';
-import {Alert} from './components/Alert';
-import {Button} from './components/Button';
+import {Alert, Dialog} from "@yokotaso/kintone-ui-component/lib/js/components-react";
 
 require('preact/debug');
 
@@ -10,22 +9,8 @@ function main(): void {
   const handleClick = (evnet: Event) => console.log(event);
   const app = document.getElementById('app') as HTMLElement;
   render(
-    <div>
-      <Label content="link" />
-      <Alert type="success">
-        <span>This is success</span>
-      </Alert>
-      <Alert type="dangar" text="dangar" />
-      <Button
-        text="button"
-        onClick={handleClick}
-      />
-
-      <Button
-        text="button"
-        type="submit"
-        onClick={handleClick}
-      />
+    <div className="hoge" onClick={(ev) => console.log(ev)}>
+      <Alert text="This is Alert" />
     </div>,
     app
   );
