@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/yokotaso/preact-typescript-sample#readme",
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
@@ -42,7 +43,9 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "@yokotaso/kintone-ui-component": "^0.2.0",
-    "preact": "^10.0.0-alpha.4"
+    "@kintone/kintone-ui-component": "^0.2.0",
+    "moment": "^2.24.0",
+    "preact": "^10.0.0-alpha.4",
+    "unistore": "^3.4.1"
   }
 }

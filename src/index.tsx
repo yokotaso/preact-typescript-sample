@@ -1,6 +1,34 @@
 /** @jsx h */
 import {render, h, JSX} from 'preact';
-import {Alert, Dialog} from "@yokotaso/kintone-ui-component/lib/js/components-react";
+import {Alert, Dialog} from "@kintone/kintone-ui-component/lib/js/components-react";
+import {Store, default as createStore, Action, ActionCreator, StateMapper} from 'unistore';
+import { Provider, connect } from 'unistore/preact';
+import { JSXInternal } from 'preact/src/jsx';
+
+interface State {
+  count: number;
+}
+
+interface Handlers {
+  handleClick: JSXInternal.UniStoreStateHandler<State, MouseEvent>;
+}
+
+const mapStateProps : StateMapper<{}, State, Handlers & State> = (state) => ({
+  ...state,
+  handleClick(state: State) : State {
+    return state;
+  }
+});
+
+const store = createStore({count: 0});
+const App = connect(mapStateProps)(
+  ({handleClick, count}) => (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  )
+);
 
 require('preact/debug');
 
@@ -8,20 +36,23 @@ function main(): void {
   // eslint-disable-next-line no-console
   const handleClick = (evnet: Event) => console.log(event);
   const app = document.getElementById('app') as HTMLElement;
+  let state = true;
   render(
-    <div className="hoge" onClick={(ev) => console.log(ev)}>
-      <Alert text="This is Alert" />
-    </div>,
+    <Provider store={store}>
+      <App />
+    </Provider>,
     app
   );
 }
 
 interface Props {
-  content: string;
+  title: string;
+  className: string;
 }
 
-function Label(props: Props): JSX.Element {
-  return <div>{props.content}</div>;
+function MyComponent(props : Props) : JSX.Element {
+  return (<div className={props.className}> hello {props.title}! </div>)
 }
+
 
 main();
